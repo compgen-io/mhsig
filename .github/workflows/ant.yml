@@ -24,3 +24,14 @@ jobs:
           dist/mhsig*jar
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload mhsig executable JAR
+      uses: actions/upload-artifact@v4
+      with:
+        name: mhsig
+        path: dist/mhsig
+
+    - name: Upload mhsig JAR
+      uses: actions/upload-artifact@v4
+      with:
+        name: mhsig.jar
+        path: dist/mhsig*.jar
